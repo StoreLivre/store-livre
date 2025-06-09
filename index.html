@@ -1,72 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Store Livre - Achadinhos do Mercado Livre</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StoreLivre - Produtos Recomendados</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f1f5f9;
-      color: #1f2937;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-    }
-    .logo {
-      width: 120px;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .link-list {
-      width: 100%;
-      max-width: 400px;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .link-item {
-      background: white;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      font-size: 1.1rem;
+    }
+
+    header {
+      background: #4a00e0;
+      color: white;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .product {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .product h2 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .product a {
+      background: #4a00e0;
+      color: white;
+      padding: 10px 15px;
       text-decoration: none;
-      color: #1f2937;
-      transition: transform 0.2s ease;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
     }
-    .link-item:hover {
-      transform: scale(1.03);
-      background: #e0f2fe;
-    }
+
     footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #6b7280;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <img src="logo.jpg" alt="Logo Store Livre" class="logo">
-  <h1>Store Livre</h1>
-  <p>Descubra os melhores achadinhos do Mercado Livre</p>
+  <header>
+    <h1>StoreLivre</h1>
+    <p>Produtos recomendados para você</p>
+  </header>
 
-  <div class="link-list">
-    <a href="https://mercadolivre.com/sec/1z3UuvJ" class="link-item" target="_blank">Produto 1</a>
-    <a href="https://mercadolivre.com/sec/24TfnkX" class="link-item" target="_blank">Produto 2</a>
-    <a href="https://mercadolivre.com/sec/1W8briX" class="link-item" target="_blank">Produto 3</a>
+  <div class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/250x200?text=Produto+1" alt="Produto 1" />
+      <h2>Produto 1</h2>
+      <a href="https://mercadolivre.com/sec/1z3UuvJ" target="_blank">Comprar</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/250x200?text=Produto+2" alt="Produto 2" />
+      <h2>Produto 2</h2>
+      <a href="https://mercadolivre.com/sec/24TfnkX" target="_blank">Comprar</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/250x200?text=Produto+3" alt="Produto 3" />
+      <h2>Produto 3</h2>
+      <a href="https://mercadolivre.com/sec/1W8briX" target="_blank">Comprar</a>
+    </div>
   </div>
 
   <footer>
-    © 2025 Store Livre - Links de afiliado do Mercado Livre
+    &copy; 2025 StoreLivre. Todos os direitos reservados.
   </footer>
 </body>
 </html>
