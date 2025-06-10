@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StoreLivre - Produtos Recomendados</title>
   <style>
+header {
+  background-color: #ffe600; /* Amarelo tipo Mercado Livre */
+  background-image:
+    url('imagens/icone_sacola.png'), /* Exemplo de imagem 1 */
+    url('imagens/icone_seta.png'); /* Exemplo de imagem 2 */
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    left 20% top 10px, /* Imagem 1: 20% da esquerda, 10px do topo */
+    right 20% bottom 10px; /* Imagem 2: 20% da direita, 10px do rodapé do header */
+  background-size: 70px, 60px; /* Tamanho das imagens de fundo, ajuste conforme necessário */
+  background-attachment: scroll; /* Ou 'fixed' para um efeito parallax sutil */
+  background-blend-mode: multiply; /* Para misturar cores das imagens com o fundo */
+
+  color: #333; /* Cor do texto no header, para contrastar com o amarelo */
+  padding: 40px 0 30px 0; /* Padding maior para o header, cria espaço para o banner */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
       background: #f0f2f5; /* Um cinza claro mais suave */
