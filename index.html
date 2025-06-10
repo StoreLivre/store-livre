@@ -6,140 +6,111 @@
   <title>StoreLivre - Produtos Recomendados</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+      background: #f0f2f5; /* Um cinza claro mais suave */
       margin: 0;
       padding: 0;
       text-align: center;
       line-height: 1.6;
-      color: #333;
+      color: #333; /* Cor de texto padrão mais escura */
     }
 
     header {
-      /* Remove o background-color roxo e adiciona o banner */
-      background-image: url('banner-fundo.jpg'); /* Caminho para a sua imagem de banner */
-      background-size: cover; /* Faz a imagem cobrir todo o espaço */
-      background-position: center; /* Centraliza a imagem */
-      background-repeat: no-repeat; /* Evita que a imagem se repita */
-      color: white; /* Mantém o texto branco para contrastar com o banner */
-      padding: 20px 0; /* Padding um pouco maior para acomodar o banner */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      position: relative; /* Necessário para posicionar elementos filhos se quiser */
-      z-index: 1; /* Garante que o header esteja acima de outros elementos se houver */
-      display: flex; /* Usar flexbox para centralizar o conteúdo do header */
-      flex-direction: column; /* Empilhar logo, h1, p */
-      justify-content: center; /* Centraliza verticalmente */
-      align-items: center; /* Centraliza horizontalmente */
-      min-height: 180px; /* Altura mínima para o header com o banner, ajuste se necessário */
-    }
-
-    /* Adicionado uma sobreposição para melhorar a legibilidade do texto */
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.2); /* Sutil camada escura para melhorar contraste */
-      z-index: -1; /* Fica abaixo do conteúdo do header */
+      background: #4a00e0;
+      color: white;
+      padding: 15px 0; /* Diminuído o padding para economizar espaço */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
     }
 
     .header-logo {
-      max-width: 120px;
+      max-width: 120px; /* Logo um pouco menor */
       height: auto;
-      margin-bottom: 5px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente para a logo */
-      padding: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para a logo para destacá-la */
-      z-index: 2; /* Garante que a logo fique acima da sobreposição */
+      margin-bottom: 5px; /* Espaçamento menor */
+      border-radius: 50%; /* Opcional: se sua logo for quadrada, isso a deixa circular */
+      background-color: white; /* Fundo branco para a logo, se ela tiver transparência */
+      padding: 5px; /* Espaçamento interno na logo */
     }
 
     h1 {
-      margin: 5px 0;
-      font-size: 2.2em;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra no texto para melhor legibilidade */
-      z-index: 2;
+      margin: 5px 0; /* Menos margem */
+      font-size: 2.2em; /* Tamanho do título um pouco maior */
+      letter-spacing: 1px; /* Pequeno espaçamento entre letras */
     }
 
     header p {
-      font-size: 1.1em;
-      color: #ffffff; /* Cor branca para o subtítulo */
+      font-size: 1.1em; /* Tamanho do parágrafo um pouco maior */
+      color: #f0f0f0; /* Cor mais suave para o subtítulo */
       margin-top: 5px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra no texto para melhor legibilidade */
-      z-index: 2;
     }
 
     .products {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
-      padding: 40px 20px;
+      gap: 25px; /* Aumentado o espaço entre os produtos */
+      padding: 40px 20px; /* Aumentado o padding da seção de produtos */
     }
 
     .product {
       background: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 15px;
-      padding: 20px;
-      width: 280px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      border: 1px solid #e0e0e0; /* Borda mais clara */
+      border-radius: 15px; /* Cantos mais arredondados */
+      padding: 20px; /* Aumentado o padding interno */
+      width: 280px; /* Ligeiramente mais largo */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+      display: flex; /* Para centralizar conteúdo verticalmente, se necessário */
+      flex-direction: column; /* Organiza itens em coluna */
+      align-items: center; /* Centraliza horizontalmente */
       text-align: center;
     }
 
     .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra mais forte no hover */
     }
 
     .product img {
       width: 100%;
-      max-height: 200px;
-      object-fit: contain;
-      border-radius: 10px;
-      margin-bottom: 15px;
+      max-height: 200px; /* Limita a altura das imagens do produto */
+      object-fit: contain; /* Ajusta a imagem dentro da caixa sem cortar */
+      border-radius: 10px; /* Cantos arredondados na imagem do produto */
+      margin-bottom: 15px; /* Espaçamento entre imagem e título */
     }
 
     .product h2 {
-      font-size: 1.3em;
-      margin: 10px 0 15px 0;
-      min-height: 48px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
+      font-size: 1.3em; /* Título do produto um pouco maior */
+      margin: 10px 0 15px 0; /* Margens ajustadas */
+      min-height: 48px; /* Altura mínima para títulos de duas linhas */
+      overflow: hidden; /* Esconde o texto que excede a caixa */
+      text-overflow: ellipsis; /* Adiciona "..." se o texto for cortado */
+      display: -webkit-box; /* Necessário para -webkit-line-clamp */
+      -webkit-line-clamp: 2; /* Limita a 2 linhas */
+      -webkit-box-orient: vertical; /* Necessário para -webkit-line-clamp */
     }
 
     .product a {
-      background: #4CAF50; /* Verde */
+      background: #4CAF50; /* Um verde mais vibrante para o botão "Comprar" */
       color: white;
-      padding: 12px 25px;
+      padding: 12px 25px; /* Padding maior para o botão */
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 8px; /* Bordas mais arredondadas para o botão */
       display: inline-block;
-      margin-top: auto;
-      font-weight: bold;
-      transition: background 0.3s ease;
+      margin-top: auto; /* Empurra o botão para baixo */
+      font-weight: bold; /* Texto do botão em negrito */
+      transition: background 0.3s ease; /* Transição suave para o botão */
     }
 
     .product a:hover {
-      background: #45a049;
+      background: #45a049; /* Cor mais escura no hover do botão */
     }
 
     footer {
-      padding: 25px;
-      font-size: 0.9em;
+      padding: 25px; /* Mais padding no footer */
+      font-size: 0.9em; /* Texto do footer um pouco menor */
       color: #777;
-      border-top: 1px solid #e0e0e0;
-      margin-top: 30px;
+      border-top: 1px solid #e0e0e0; /* Linha sutil no topo do footer */
+      margin-top: 30px; /* Espaçamento maior antes do footer */
     }
   </style>
 </head>
@@ -167,49 +138,14 @@
       <a href="https://mercadolivre.com/sec/1W8briX" target="_blank">Comprar</a>
     </div>
     <div class="product">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_668904-MLA78083984365_082024-O.webp" alt="Produto 4" />
-        <h2>Kit Teclado E Mouse Sem Fio Exbom Bk-c4200 Usb Preto</h2>
-        <a href="https://mercadolivre.com/sec/240t301" target="_blank">Comprar</a>
+      <img src="https://http2.mlstatic.com/D_NQ_NP_877626-MLB85259696574_062025-O-kit-2-calcas-jeans-masculina-skinny-elastano-lycra-premium.webp" alt="Produto 4" />
+      <h2>Kit 2 Calças Jeans Masculina Skinny Elastano Lycra Premium</h2>
+      <a href="https://mercadolivre.com/sec/2nEiZzS" target="_blank">Comprar</a>
     </div>
     <div class="product">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_956799-MLM78083658514_082024-O.webp" alt="Produto 5" />
-        <h2>Relógio Inteligente Smartwatch Iwo W29 Pro Series 9 Preto</h2>
-        <a href="https://mercadolivre.com/sec/28L86rQ" target="_blank">Comprar</a>
-    </div>
-    <div class="product">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_899661-MLU74278458994_022024-O.webp" alt="Produto 6" />
-        <h2>Fone De Ouvido Bluetooth Sem Fio Kaidi Kd912 Preto</h2>
-        <a href="https://mercadolivre.com/sec/1zK0W69" target="_blank">Comprar</a>
-    </div>
-    <div class="product">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_745914-MLA77969850654_082024-O.webp" alt="Produto 7" />
-        <h2>Câmera De Segurança Wi-fi Hd Ip P2p Visão Noturna Áudio</h2>
-        <a href="https://mercadolivre.com/sec/1o7t2uY" target="_blank">Comprar</a>
-    </div>
-    <div class="product">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_672658-MLB78082987556_082024-O.webp" alt="Produto 8" />
-        <h2>Drone Com Câmera Hd Fpv Wifi Profissional Dobrável Preto</h2>
-        <a href="https://mercadolivre.com/sec/1Q1mK8j" target="_blank">Comprar</a>
-    </div>
-    <div class="product">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_753139-MLB77874059005_072024-O.webp" alt="Produto 9" />
-        <h2>Projetor Portátil Led Wifi Android 4k Full Hd Bluetooth</h2>
-        <a href="https://mercadolivre.com/sec/22w8d92" target="_blank">Comprar</a>
-    </div>
-    <div class="product">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_907406-MLA78083984366_082024-O.webp" alt="Produto 10" />
-        <h2>Smart TV Box Android 11.1 4k Hdmi Wifi Original</h2>
-        <a href="https://mercadolivre.com/sec/1w0J65A" target="_blank">Comprar</a>
-    </div>
-    <div class="product">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_727407-MLB78084042861_082024-O.webp" alt="Produto 11" />
-        <h2>Fone De Ouvido Bluetooth Sem Fio Kaidi Kd912 Preto</h2>
-        <a href="https://mercadolivre.com/sec/1zK0W69" target="_blank">Comprar</a>
-    </div>
-    <div class="product">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_668904-MLA78083984365_082024-O.webp" alt="Produto 12" />
-        <h2>Kit Teclado E Mouse Sem Fio Exbom Bk-c4200 Usb Preto</h2>
-        <a href="https://mercadolivre.com/sec/240t301" target="_blank">Comprar</a>
+      <img src="https://http2.mlstatic.com/D_NQ_NP_904481-MLB78961358543_092024-O-camiseta-masculina-basica-lisa-gola-redonda-premium-dry-fit.webp" alt="Produto 5" />
+      <h2>Camiseta Masculina Básica Lisa Gola Redonda Premium Dry Fit</h2>
+      <a href="https://mercadolivre.com/sec/1heZB7L" target="_blank">Comprar</a>
     </div>
   </div>
 
