@@ -5,131 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StoreLivre - Produtos Recomendados</title>
   <style>
-header {
-  background-color: #ffe600; /* Amarelo tipo Mercado Livre */
-  background-image:
-    url('imagens/icone_sacola.png'), /* Exemplo de imagem 1 */
-    url('imagens/icone_seta.png'); /* Exemplo de imagem 2 */
-  background-repeat: no-repeat, no-repeat;
-  background-position:
-    left 20% top 10px, /* Imagem 1: 20% da esquerda, 10px do topo */
-    right 20% bottom 10px; /* Imagem 2: 20% da direita, 10px do rodapé do header */
-  background-size: 70px, 60px; /* Tamanho das imagens de fundo, ajuste conforme necessário */
-  background-attachment: scroll; /* Ou 'fixed' para um efeito parallax sutil */
-  background-blend-mode: multiply; /* Para misturar cores das imagens com o fundo */
-
-  color: #333; /* Cor do texto no header, para contrastar com o amarelo */
-  padding: 40px 0 30px 0; /* Padding maior para o header, cria espaço para o banner */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  position: relative;
-  z-index: 1;
-}
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
-      background: #f0f2f5; /* Um cinza claro mais suave */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
       margin: 0;
       padding: 0;
       text-align: center;
       line-height: 1.6;
-      color: #333; /* Cor de texto padrão mais escura */
+      color: #333;
     }
 
     header {
-      background: #4a00e0;
-      color: white;
-      padding: 15px 0; /* Diminuído o padding para economizar espaço */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
+      /* Estilos para o banner de fundo */
+      background-color: #ffe600; /* Amarelo tipo Mercado Livre */
+      background-image:
+        url('imagens/icone_sacola.png'), /* Exemplo de imagem 1 */
+        url('imagens/icone_seta.png'); /* Exemplo de imagem 2 */
+      background-repeat: no-repeat, no-repeat;
+      background-position:
+        left 20% top 10px, /* Imagem 1: 20% da esquerda, 10px do topo */
+        right 20% bottom 10px; /* Imagem 2: 20% da direita, 10px do rodapé do header */
+      background-size: 70px, 60px; /* Tamanho das imagens de fundo, ajuste conforme necessário */
+      background-attachment: scroll; /* Ou 'fixed' para um efeito parallax sutil */
+      background-blend-mode: multiply; /* Para misturar cores das imagens com o fundo */
+
+      /* Estilos do cabeçalho em si */
+      color: #333; /* Cor do texto no header, para contrastar com o amarelo */
+      padding: 40px 0 30px 0; /* Padding maior para o header, cria espaço para o banner */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: relative; /* Necessário para o z-index e posicionamento */
+      z-index: 1; /* Garante que o header esteja em uma camada acima de outros elementos se houver */
     }
 
+    /* Ajustes para a logo e texto dentro do header */
     .header-logo {
-      max-width: 120px; /* Logo um pouco menor */
+      max-width: 100px;
       height: auto;
-      margin-bottom: 5px; /* Espaçamento menor */
-      border-radius: 50%; /* Opcional: se sua logo for quadrada, isso a deixa circular */
-      background-color: white; /* Fundo branco para a logo, se ela tiver transparência */
-      padding: 5px; /* Espaçamento interno na logo */
+      margin-bottom: 8px; /* Espaçamento ajustado */
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.9); /* Fundo branco um pouco mais opaco */
+      padding: 7px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave na logo */
+      display: block; /* Garante que a logo ocupe sua própria linha */
+      margin-left: auto; /* Centraliza a logo */
+      margin-right: auto; /* Centraliza a logo */
     }
 
     h1 {
-      margin: 5px 0; /* Menos margem */
-      font-size: 2.2em; /* Tamanho do título um pouco maior */
-      letter-spacing: 1px; /* Pequeno espaçamento entre letras */
+      margin: 5px 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+      color: #333;
     }
 
     header p {
-      font-size: 1.1em; /* Tamanho do parágrafo um pouco maior */
-      color: #f0f0f0; /* Cor mais suave para o subtítulo */
+      font-size: 1.2em;
+      color: #555;
       margin-top: 5px;
     }
 
+    /* Estilos dos produtos permanecem os mesmos, mas incluídos para completude */
     .products {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px; /* Aumentado o espaço entre os produtos */
-      padding: 40px 20px; /* Aumentado o padding da seção de produtos */
+      gap: 25px;
+      padding: 40px 20px;
     }
 
     .product {
       background: white;
-      border: 1px solid #e0e0e0; /* Borda mais clara */
-      border-radius: 15px; /* Cantos mais arredondados */
-      padding: 20px; /* Aumentado o padding interno */
-      width: 280px; /* Ligeiramente mais largo */
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
-      display: flex; /* Para centralizar conteúdo verticalmente, se necessário */
-      flex-direction: column; /* Organiza itens em coluna */
-      align-items: center; /* Centraliza horizontalmente */
+      border: 1px solid #e0e0e0;
+      border-radius: 15px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
     }
 
     .product:hover {
-      transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra mais forte no hover */
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     .product img {
       width: 100%;
-      max-height: 200px; /* Limita a altura das imagens do produto */
-      object-fit: contain; /* Ajusta a imagem dentro da caixa sem cortar */
-      border-radius: 10px; /* Cantos arredondados na imagem do produto */
-      margin-bottom: 15px; /* Espaçamento entre imagem e título */
+      max-height: 200px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
 
     .product h2 {
-      font-size: 1.3em; /* Título do produto um pouco maior */
-      margin: 10px 0 15px 0; /* Margens ajustadas */
-      min-height: 48px; /* Altura mínima para títulos de duas linhas */
-      overflow: hidden; /* Esconde o texto que excede a caixa */
-      text-overflow: ellipsis; /* Adiciona "..." se o texto for cortado */
-      display: -webkit-box; /* Necessário para -webkit-line-clamp */
-      -webkit-line-clamp: 2; /* Limita a 2 linhas */
-      -webkit-box-orient: vertical; /* Necessário para -webkit-line-clamp */
+      font-size: 1.3em;
+      margin: 10px 0 15px 0;
+      min-height: 48px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     .product a {
-      background: #4CAF50; /* Um verde mais vibrante para o botão "Comprar" */
+      background: #4CAF50;
       color: white;
-      padding: 12px 25px; /* Padding maior para o botão */
+      padding: 12px 25px;
       text-decoration: none;
-      border-radius: 8px; /* Bordas mais arredondadas para o botão */
+      border-radius: 8px;
       display: inline-block;
-      margin-top: auto; /* Empurra o botão para baixo */
-      font-weight: bold; /* Texto do botão em negrito */
-      transition: background 0.3s ease; /* Transição suave para o botão */
+      margin-top: auto;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
 
     .product a:hover {
-      background: #45a049; /* Cor mais escura no hover do botão */
+      background: #45a049;
     }
 
     footer {
-      padding: 25px; /* Mais padding no footer */
-      font-size: 0.9em; /* Texto do footer um pouco menor */
+      padding: 25px;
+      font-size: 0.9em;
       color: #777;
-      border-top: 1px solid #e0e0e0; /* Linha sutil no topo do footer */
-      margin-top: 30px; /* Espaçamento maior antes do footer */
+      border-top: 1px solid #e0e0e0;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -157,14 +160,34 @@ header {
       <a href="https://mercadolivre.com/sec/1W8briX" target="_blank">Comprar</a>
     </div>
     <div class="product">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_877626-MLB85259696574_062025-O-kit-2-calcas-jeans-masculina-skinny-elastano-lycra-premium.webp" alt="Produto 4" />
-      <h2>Kit 2 Calças Jeans Masculina Skinny Elastano Lycra Premium</h2>
-      <a href="https://mercadolivre.com/sec/2nEiZzS" target="_blank">Comprar</a>
+      <img src="https://http2.mlstatic.com/D_NQ_NP_990537-MLA77874009092_072024-O-liquidificador-pratic-turbo-l-98-b-preto-550w-mondial.webp" alt="Produto 4" />
+      <h2>Liquidificador Pratic Turbo L-98-b Preto 550w Mondial</h2>
+      <a href="https://mercadolivre.com/sec/1z3UuvJ" target="_blank">Comprar</a>
     </div>
     <div class="product">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_904481-MLB78961358543_092024-O-camiseta-masculina-basica-lisa-gola-redonda-premium-dry-fit.webp" alt="Produto 5" />
-      <h2>Camiseta Masculina Básica Lisa Gola Redonda Premium Dry Fit</h2>
-      <a href="https://mercadolivre.com/sec/1heZB7L" target="_blank">Comprar</a>
+      <img src="https://http2.mlstatic.com/D_NQ_NP_951746-MLU76232600191_052024-O.webp" alt="Produto 5" />
+      <h2>Aqua Jóias Ponto de luz 45cm prateado prata 925</h2>
+      <a href="https://mercadolivre.com/sec/24TfnkX" target="_blank">Comprar</a>
+    </div>
+    <div class="product">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_754803-MLA84838225671_052025-O.webp" alt="Produto 6" />
+      <h2>Parafusadeira E Furadeira Impacto Tb-21pz The Black Tools 2 Baterias 21v 3/8 Com Jogo De Brocas Bits E Buchas 300 Peças</h2>
+      <a href="https://mercadolivre.com/sec/1W8briX" target="_blank">Comprar</a>
+    </div>
+    <div class="product">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_990537-MLA77874009092_072024-O-liquidificador-pratic-turbo-l-98-b-preto-550w-mondial.webp" alt="Produto 7" />
+      <h2>Liquidificador Pratic Turbo L-98-b Preto 550w Mondial</h2>
+      <a href="https://mercadolivre.com/sec/1z3UuvJ" target="_blank">Comprar</a>
+    </div>
+    <div class="product">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_951746-MLU76232600191_052024-O.webp" alt="Produto 8" />
+      <h2>Aqua Jóias Ponto de luz 45cm prateado prata 925</h2>
+      <a href="https://mercadolivre.com/sec/24TfnkX" target="_blank">Comprar</a>
+    </div>
+    <div class="product">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_754803-MLA84838225671_052025-O.webp" alt="Produto 9" />
+      <h2>Parafusadeira E Furadeira Impacto Tb-21pz The Black Tools 2 Baterias 21v 3/8 Com Jogo De Brocas Bits E Buchas 300 Peças</h2>
+      <a href="https://mercadolivre.com/sec/1W8briX" target="_blank">Comprar</a>
     </div>
   </div>
 
