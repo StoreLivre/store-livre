@@ -6,71 +6,111 @@
   <title>StoreLivre - Produtos Recomendados</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+      background: #f0f2f5; /* Um cinza claro mais suave */
       margin: 0;
       padding: 0;
       text-align: center;
+      line-height: 1.6;
+      color: #333; /* Cor de texto padrão mais escura */
     }
 
     header {
       background: #4a00e0;
       color: white;
-      padding: 20px 0;
+      padding: 15px 0; /* Diminuído o padding para economizar espaço */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
     }
 
-    /* Adicionado estilo para a logo */
     .header-logo {
-      max-width: 150px; /* Ajuste o tamanho conforme necessário */
+      max-width: 120px; /* Logo um pouco menor */
       height: auto;
-      margin-bottom: 10px; /* Espaçamento entre a logo e o texto */
+      margin-bottom: 5px; /* Espaçamento menor */
+      border-radius: 50%; /* Opcional: se sua logo for quadrada, isso a deixa circular */
+      background-color: white; /* Fundo branco para a logo, se ela tiver transparência */
+      padding: 5px; /* Espaçamento interno na logo */
     }
 
     h1 {
-      margin: 0;
+      margin: 5px 0; /* Menos margem */
+      font-size: 2.2em; /* Tamanho do título um pouco maior */
+      letter-spacing: 1px; /* Pequeno espaçamento entre letras */
+    }
+
+    header p {
+      font-size: 1.1em; /* Tamanho do parágrafo um pouco maior */
+      color: #f0f0f0; /* Cor mais suave para o subtítulo */
+      margin-top: 5px;
     }
 
     .products {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      padding: 30px;
+      gap: 25px; /* Aumentado o espaço entre os produtos */
+      padding: 40px 20px; /* Aumentado o padding da seção de produtos */
     }
 
     .product {
       background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 15px;
-      width: 250px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border: 1px solid #e0e0e0; /* Borda mais clara */
+      border-radius: 15px; /* Cantos mais arredondados */
+      padding: 20px; /* Aumentado o padding interno */
+      width: 280px; /* Ligeiramente mais largo */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+      display: flex; /* Para centralizar conteúdo verticalmente, se necessário */
+      flex-direction: column; /* Organiza itens em coluna */
+      align-items: center; /* Centraliza horizontalmente */
+      text-align: center;
+    }
+
+    .product:hover {
+      transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra mais forte no hover */
     }
 
     .product img {
       width: 100%;
-      border-radius: 8px;
+      max-height: 200px; /* Limita a altura das imagens do produto */
+      object-fit: contain; /* Ajusta a imagem dentro da caixa sem cortar */
+      border-radius: 10px; /* Cantos arredondados na imagem do produto */
+      margin-bottom: 15px; /* Espaçamento entre imagem e título */
     }
 
     .product h2 {
-      font-size: 18px;
-      margin: 10px 0;
+      font-size: 1.3em; /* Título do produto um pouco maior */
+      margin: 10px 0 15px 0; /* Margens ajustadas */
+      min-height: 48px; /* Altura mínima para títulos de duas linhas */
+      overflow: hidden; /* Esconde o texto que excede a caixa */
+      text-overflow: ellipsis; /* Adiciona "..." se o texto for cortado */
+      display: -webkit-box; /* Necessário para -webkit-line-clamp */
+      -webkit-line-clamp: 2; /* Limita a 2 linhas */
+      -webkit-box-orient: vertical; /* Necessário para -webkit-line-clamp */
     }
 
     .product a {
-      background: #4a00e0;
+      background: #4CAF50; /* Um verde mais vibrante para o botão "Comprar" */
       color: white;
-      padding: 10px 15px;
+      padding: 12px 25px; /* Padding maior para o botão */
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px; /* Bordas mais arredondadas para o botão */
       display: inline-block;
-      margin-top: 10px;
+      margin-top: auto; /* Empurra o botão para baixo */
+      font-weight: bold; /* Texto do botão em negrito */
+      transition: background 0.3s ease; /* Transição suave para o botão */
+    }
+
+    .product a:hover {
+      background: #45a049; /* Cor mais escura no hover do botão */
     }
 
     footer {
-      padding: 20px;
-      font-size: 14px;
+      padding: 25px; /* Mais padding no footer */
+      font-size: 0.9em; /* Texto do footer um pouco menor */
       color: #777;
+      border-top: 1px solid #e0e0e0; /* Linha sutil no topo do footer */
+      margin-top: 30px; /* Espaçamento maior antes do footer */
     }
   </style>
 </head>
